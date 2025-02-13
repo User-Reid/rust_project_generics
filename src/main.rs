@@ -10,7 +10,7 @@ struct ChatMessage<T> {
     time: String,
 }
 
-impl ChatMessage<DigitalContent> {
+impl<T: std::fmt::Debug> ChatMessage<T> {
     fn consume_entertainment(&self) {
         println!("Watching the {:?}", self.content)
     }
